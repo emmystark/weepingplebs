@@ -67,7 +67,7 @@ const StickyNavigation: React.FC<{
         {/* Mobile Menu */}
         
           <ul className={styles.mobileNav}>
-            <ConnectWallet />
+            {/* <ConnectWallet /> */}
             <li><a href="#home">Base</a></li>
             {/* <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li> */}

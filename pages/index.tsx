@@ -22,7 +22,7 @@ import {
   tokenContractAddress,
 } from "../consts/contractAddresses";
 import StickyNavigation from "./StickyNavigation";
-
+import Dashboard from "./dashboard";
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -73,49 +73,28 @@ const Home: NextPage = () => {
   // }
 
   return (
-    <div className={styles.bigDiv}>
+    <div >
     {/* <StickyNavigation/> */}
-    <div className={styles.container}>
-      <h1 className={styles.h1}>Welcome To Weeping Plebs Staking Dapp</h1>
-      <hr className={`${styles.divider} ${styles.spacerTop}`} />
+    {/* <div className={styles.container}> */}
+      {/* <h1 className={styles.h1}>Welcome To Weeping Plebs Staking Dapp</h1> */}
+      {/* <hr className={`${styles.divider} ${styles.spacerTop}`} /> */}
 
       {!address ? (
-        <ConnectWallet />
+        <div className={styles.contt}>
+
+          <ConnectWallet  />
+        </div>
       ) : (
         <>
           
 
           
 
-          <hr className={`${styles.divider} ${styles.spacerTop}`} />
-          
-          <div className={styles.nftBoxGrid}>
-            {stakedTokens &&
-              stakedTokens[0]?.map((stakedToken: BigNumber) => (
-                <NFTCards
-                  tokenId={stakedToken.toNumber()}
-                  key={stakedToken.toString()}
-                />
-              ))}
-          
-
-          
-          
-            {ownedNfts?.map((nft) => (
-              <div className={styles.nftBox} key={nft.metadata.id.toString()}>
-                <ThirdwebNftMedia
-                  metadata={nft.metadata}
-                  className={styles.nftMedia}
-                />
-                <h3>{nft.metadata.name}</h3>
-                
-              </div>
-            ))}
-          </div>
+          <Dashboard/>
         </>
       )}
     </div>
-    </div>
+    // </div>
   );
 };
 

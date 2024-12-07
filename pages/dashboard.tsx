@@ -134,7 +134,7 @@ const Dashboard: NextPage = () => {
             <p>IMAGE</p>
             <p>NAME</p>
             <p>ID</p>
-            <p className={styles.stake}>STAKERS</p>
+            <p className={styles.nftBoxGrid}>STAKERS</p>
           </div>
           <div className={styles.nftBoxGrid}>
             {stakedTokens &&
