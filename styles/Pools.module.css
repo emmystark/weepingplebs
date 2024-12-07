@@ -1,0 +1,21 @@
+.coming {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;    /* Vertically center */
+             /* Full viewport height */
+    width: 80vw;
+    position: relative;
+    left: 25%;
+    height: 100vh;
+    background-color: black; /* Optional background color */
+    font-family: Arial, sans-serif; /* Optional font styling */
+    
+  }
+  
+  .coming h1 {
+    font-size: 5rem;  /* Adjust font size */
+    color: white;
+    justify-content: center;
+    align-items: center;
+  }
+  
